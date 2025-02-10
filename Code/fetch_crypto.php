@@ -96,14 +96,14 @@ foreach ($data['data'] as $coin) {
     $coin_id = $coin['id'];
     $name = $coin['name'];
     $symbol = $coin['symbol'];
-    $quoteUSD = $coin['quote']['ZAR'];
-    $price = $quoteUSD['price'];
-    $market_cap = $quoteUSD['market_cap'];
-    $volume_24h = $quoteUSD['volume_24h'];
-    $percent_change_1h = $quoteUSD['percent_change_1h'];
-    $percent_change_24h = $quoteUSD['percent_change_24h'];
-    $percent_change_7d = $quoteUSD['percent_change_7d'];
-    $last_updated = date('Y-m-d H:i:s', strtotime($quoteUSD['last_updated']));
+    $quoteZAR = $coin['quote']['ZAR'];
+    $price = $quote['price'];
+    $market_cap = $quoteZAR['market_cap'];
+    $volume_24h = $quoteZAR['volume_24h'];
+    $percent_change_1h = $quoteZAR['percent_change_1h'];
+    $percent_change_24h = $quoteZAR['percent_change_24h'];
+    $percent_change_7d = $quoteZAR['percent_change_7d'];
+    $last_updated = date('Y-m-d H:i:s', strtotime($quoteZAR['last_updated']));
 
     $stmt->execute([
         ':coin_id' => $coin_id,
